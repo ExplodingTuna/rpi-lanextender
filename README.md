@@ -1,14 +1,18 @@
 # rpi-lanextender
 These are instructions to configure a raspberry pi to extend a static ip network over Wi-Fi.
-1. Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS Lite
-2. Setup the raspberry pi with the preferred settings
-3. Type “sudo raspi-config”, go into Localization Options, and configure the correct timezone
-4. Setup the current time with the formatL “sudo date -s ‘YYYY-MM-DD HH:MM:SS’ ”
-5. Type sudo apt update
-6. Type sudo apt upgrade, then Y when prompted
-7. Enter the following:
+- Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS Lite
+- Setup the raspberry pi with the preferred settings
+- Type “sudo raspi-config”, go into Localization Options, and configure the correct timezone
+- Setup the current time with the formatL “sudo date -s ‘YYYY-MM-DD HH:MM:SS’ ”
+- Type sudo apt update
+- Type sudo apt upgrade, then Y when prompted
+- Enter the following:
+```bash
 sudo systemctl unmask hostapd
+```
+```bash
 sudo systemctl enable hostapd
+```
 8. Type “sudo nano /etc/systemd/network/bridge-br0.netdev” and enter the following:
 [NetDev]
 Name=br0
