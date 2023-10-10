@@ -34,7 +34,7 @@ sudo systemctl enable hostapd
 ```
 - Now do the same for dnsmasq
 ```bash
-sudo systemctl unmask hostapd
+sudo systemctl unmask dnsmasq
 ```
 ```bash
 sudo systemctl enable dnsmasq
