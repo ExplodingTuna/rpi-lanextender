@@ -34,9 +34,6 @@ sudo systemctl enable hostapd
 ```
 - Now do the same for dnsmasq
 ```bash
-sudo systemctl unmask dnsmasq
-```
-```bash
 sudo systemctl enable dnsmasq
 ```
 - Type “sudo nano /etc/systemd/network/bridge-br0.netdev” and enter the following:
