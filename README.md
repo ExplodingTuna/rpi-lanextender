@@ -2,10 +2,22 @@
 These are instructions to configure a raspberry pi to extend a static ip network over Wi-Fi.
 - Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS Lite
 - Insert the SD card into the raspberry pi and go throught the initial setup with your preferred settings
-- Type “sudo raspi-config”, go into Localization Options, and configure the correct timezone
-- Setup the current time with the formatL “sudo date -s ‘YYYY-MM-DD HH:MM:SS’ ”
-- Type sudo apt update
-- Type sudo apt upgrade, then Y when prompted
+- Enter the following command, go into Localization Options, and configure the correct timezone
+```bash
+sudo raspi-config
+```
+- Use the date command and replace the letters with the appropriate date
+```bash
+sudo date -s ‘YYYY-MM-DD HH:MM:SS’ 
+```
+Update the raspberry pi's packages
+```bash
+sudo apt update
+``` 
+Upgrade the raspberry pi's packages, then press Y if prompted
+```bash
+sudo apt upgrade
+```
 - Install hostapd and dnsmasq
 ```bash
 sudo install hostapd
@@ -13,7 +25,7 @@ sudo install hostapd
 ```bash
 sudo install dnsmasq
 ```
-- Unmask and enable hostapd so it starts on boot:
+- Unmask and enable hostapd so it starts on boot
 ```bash
 sudo systemctl unmask hostapd
 ```
@@ -66,7 +78,7 @@ wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 ```
-- Type sudo nano /etc/dnsmasq.conf:
+- Type sudo nano /etc/dnsmasq.conf and paste the following:
 ```bash
 interface=br0
 bind-dynamic
@@ -74,8 +86,11 @@ domain-needed
 bogus-priv
 dhcp-range=192.168.1.81,192.168.1.254,255.255.255.0,24h
 ```
-- Type sudo nano /etc/default/hostapd and remove the # from the DAEMON_CONF line and add inside the quotations:
+- Type sudo nano /etc/default/hostapd and remove the # from the DAEMON_CONF line and paste inside the quotations:
 ```bash
 /etc/hostapd/hostapd.conf
 ```
-- Type sudo systemctl reboot
+- Reboot
+```bash
+sudo systemctl reboot
+```
