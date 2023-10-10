@@ -2,7 +2,7 @@
 These are instructions to configure a raspberry pi to extend a static ip network over Wi-Fi.
 - Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS Lite
 - Insert the SD card into the raspberry pi and go throught the initial setup with your preferred settings
-- Enter the following command, go into Localization Options, and configure the correct timezone
+- Enter the following command, go into Localization Options, and configure the correct timezone and correct country
 ```bash
 sudo raspi-config
 ```
