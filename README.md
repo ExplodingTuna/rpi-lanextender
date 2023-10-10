@@ -53,11 +53,11 @@ Name=eth0
 [Network]
 Bridge=br0
 ```
+- Ctrl+O and Enter to save, Ctrl+X to exit
 - Populate the bridge when raspberry boots
 ```bash
 sudo systemctl enable systemd-networkd
 ```
-- Ctrl+O and Enter to save, Ctrl+X to exit
 - Type sudo nano /etc/dhcpcd.conf and enter the following anywhere near the top:
 ```bash
 denyinterfaces wlan0 eth0
