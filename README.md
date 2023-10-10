@@ -56,15 +56,22 @@ Bridge=br0
 - Ctrl+O and Enter to save, Ctrl+X to exit
 - Type sudo nano /etc/dhcpcd.conf and enter the following anywhere near the top:
 ```bash
-denyinterfaces wlan0 eth0 
-interface br0 //put this at the end of the file
+denyinterfaces wlan0 eth0
+```
+- Before exiting the file add this at the end:
+```bash
+interface br0
 static ip_address=192.168.1.2/24
 ```
-- Type sudo rfkill unblock wlan
+- Save and exit the file
+- Input the following command
+```bash
+sudo rfkill unblock wlan
+```
 - Type sudo nano /etc/hostapd/hostapd.conf:
 ```bash
 country_code=US
-interface=br0
+interface=wlan0
 bridge=br0
 ssid=axbridge
 hw_mode=g
