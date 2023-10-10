@@ -20,10 +20,10 @@ sudo apt upgrade
 ```
 - Install hostapd and dnsmasq
 ```bash
-sudo install hostapd
+sudo apt install hostapd
 ```
 ```bash
-sudo install dnsmasq
+sudo apt install dnsmasq
 ```
 - Unmask and enable hostapd so it starts on boot
 ```bash
