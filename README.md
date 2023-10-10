@@ -10,11 +10,11 @@ sudo raspi-config
 ```bash
 sudo date -s ‘YYYY-MM-DD HH:MM:SS’ 
 ```
-Update the raspberry pi's packages
+- Update the raspberry pi's packages
 ```bash
 sudo apt update
 ``` 
-Upgrade the raspberry pi's packages, then press Y if prompted
+- Upgrade the raspberry pi's packages, then press Y if prompted
 ```bash
 sudo apt upgrade
 ```
