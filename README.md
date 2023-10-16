@@ -108,7 +108,7 @@ sudo systemctl reboot
 FOR SCRIPT INSTALLATION:
 - Download the axbridge.sh onto a USB
 - Power on the raspberry pi (without the USB plugged in) and follow the manual installation process untill you need to install hostapd
-- Plug in the USB and use the following command to find your USB (typically /dev/< something >):
+- Plug in the USB and use the following command to find your USB (for me its sda1 aka /dev/sda1):
 ```bash
 lsblk
 ```
