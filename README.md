@@ -1,7 +1,9 @@
 # rpi-lanextender
 These are instructions to configure a raspberry pi to extend a static ip network over Wi-Fi.
+
+FOR MANUAL INSTALLATION:
 - Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS Lite
-- Insert the SD card into the raspberry pi and go throught the initial setup with your preferred settings
+- Insert the SD card into the raspberry pi and go through the initial setup with your preferred settings
 - Enter the following command, go into Localization Options, and configure the correct timezone and correct country
 ```bash
 sudo raspi-config
@@ -101,4 +103,25 @@ dhcp-range=192.168.1.81,192.168.1.254,255.255.255.0,24h
 - Reboot
 ```bash
 sudo systemctl reboot
+```
+
+FOR SCRIPT INSTALLATION:
+- Download the axbridge.sh onto a USB
+- Power on the raspberry pi (without the USB plugged in) and follow the manual installation process untill you need to install hostapd
+- Plug in the USB and use the following command to find your USB (typically /dev/<something>):
+```bash
+lsblk
+```
+- Mount the USB with the following command:
+```bash
+sudo mkdir /media/usb
+sudo mount <usb filepath> /media/usb
+```
+- Run the script:
+```bash
+/media/usb/axbridge.sh
+```
+- Unmount the USB once the device reboots:
+```
+sudo umount /media/usb
 ```
