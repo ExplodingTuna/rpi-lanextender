@@ -104,6 +104,7 @@ dhcp-range=192.168.1.81,192.168.1.254,255.255.255.0,24h
 ```bash
 sudo systemctl reboot
 ```
+- Done
 
 FOR SCRIPT INSTALLATION:
 - Download the axbridge.sh onto a USB
@@ -121,7 +122,5 @@ sudo mount <usb filepath> /media/usb
 ```bash
 /media/usb/axbridge.sh
 ```
-- Unmount the USB once the device reboots:
-```
-sudo umount /media/usb
-```
+- Done
+  
