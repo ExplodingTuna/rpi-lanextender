@@ -2,7 +2,7 @@
 These are instructions to configure a raspberry pi to extend a static ip network over Wi-Fi.
 
 FOR MANUAL INSTALLATION:
-- Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS Lite
+- Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS (Lgeacy) Lite
 - Insert the SD card into the raspberry pi and go through the initial setup with your preferred settings
 - Enter the following command, go into Localization Options, and configure the correct timezone and correct country
 ```bash
