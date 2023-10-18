@@ -116,7 +116,7 @@ lsblk
 ```
 - Mount the USB with the following command:
 ```bash
-sudo mkdir ~/usb
+mkdir ~/usb
 sudo mount <usb filepath> ~/usb
 ```
 - Run the script:
