@@ -116,12 +116,12 @@ lsblk
 ```
 - Mount the USB with the following command:
 ```bash
-sudo mkdir /media/usb
-sudo mount <usb filepath> /media/usb
+sudo mkdir ~/usb
+sudo mount <usb filepath> ~/usb
 ```
 - Run the script:
 ```bash
-/media/usb/axbridge.sh
+~/usb/axbridge.sh
 ```
 - Done
   
