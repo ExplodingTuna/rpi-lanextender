@@ -1,9 +1,9 @@
 # rpi-lanextender
 These are instructions to configure a raspberry pi to extend a static ip network over Wi-Fi.
-These intructions utilize the Raspberry Pi Imager. As of October the default OS shifted from on based Debian 11 (bullseye) to based on Debian 12 (bookworm). These instructions were tested with the OS based on Debian 11 and may not work with the new OS.
+These intructions utilize the Raspberry Pi Imager. As of October the default OS shifted from based on Debian 11 (bullseye) to based on Debian 12 (bookworm). These instructions were tested with the OS based on Debian 11 and may not work with the new OS.
 
 FOR MANUAL INSTALLATION:
-- Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS (Lgeacy) Lite
+- Format the raspberry pi SD card using rasp pi imager, and install Raspberry Pi OS (Legacy) Lite
 - Insert the SD card into the raspberry pi and go through the initial setup with your preferred settings
 - Enter the following command, go into Localization Options, and configure the correct timezone and correct country
 ```bash
